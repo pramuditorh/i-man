@@ -1,3 +1,8 @@
+From this project
+.vscode
+venv
+ENV_VAR
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

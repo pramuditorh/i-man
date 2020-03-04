@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Input Patch Cord</h1>
+<form action="" method="POST" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.typePatchCord.label }} {{ form.typePatchCord }}
+        {% if form.typePatchCord.errors %}
+            {% for error in form.typePatchCord.errors %}
+            <span style="color: red;">{{ error }}</span>
+            {% endfor %}
+        {% endif %}
+    </p>
+    <p>
+        {{ form.lengthPatchCord.label }} <br>
+        {{ form.lengthPatchCord(size=32) }}
+        {% for error in form.lengthPatchCord.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.notePatchCord.label }} <br>
+        {{ form.notePatchCord(size=32) }}
+        {% for error in form.notePatchCord.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.recordOfTransferPatchCord.label }} <br>
+        {{ form.recordOfTransferPatchCord(size=32) }}
+        {% for error in form.recordOfTransferPatchCord.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.submitPatchCord() }}
+    </p>
+</form>
+{% endblock %}
